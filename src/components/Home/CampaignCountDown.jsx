@@ -1,4 +1,4 @@
-import CountDown from "../Helpers/CountDown";
+import CountDown from "../CountDown";
 
 export default function CampaignCountDown({
   className,
@@ -19,7 +19,7 @@ export default function CampaignCountDown({
               style={{
                 background: `url(${
                   import.meta.env.VITE_PUBLIC_URL
-                }/assets/images/campaign-cover-countdown.jpg) no-repeat`,
+                }/src/assets/images/campaign-cover-countdown.jpg) no-repeat`,
                 backgroundSize: "cover",
               }}
             >
@@ -114,7 +114,7 @@ export default function CampaignCountDown({
                   counterbg ||
                   `${
                     import.meta.env.VITE_PUBLIC_URL
-                  }/assets/images/download-app-cover.png`
+                  }/src/assets/images/download-app-cover.png`
                 }) no-repeat`,
                 backgroundSize: "cover",
               }}
@@ -139,7 +139,7 @@ export default function CampaignCountDown({
                           height="69"
                           src={`${
                             import.meta.env.VITE_PUBLIC_URL
-                          }/assets/images/play-store.png`}
+                          }/src/assets/images/play-store.png`}
                           alt=""
                         />
                       </a>
@@ -151,7 +151,7 @@ export default function CampaignCountDown({
                           height="69"
                           src={`${
                             import.meta.env.VITE_PUBLIC_URL
-                          }/assets/images/apple-store.png`}
+                          }/src/assets/images/apple-store.png`}
                           alt=""
                         />
                       </a>
@@ -164,7 +164,7 @@ export default function CampaignCountDown({
                       appscreen ||
                       `${
                         import.meta.env.VITE_PUBLIC_URL
-                      }/assets/images/app-screen.png`
+                      }/src/assets/images/app-screen.png`
                     }
                     alt=""
                   />

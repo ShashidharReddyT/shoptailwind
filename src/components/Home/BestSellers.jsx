@@ -11,7 +11,7 @@ export default function BestSellers({ className }) {
             <img
               src={`${
                 import.meta.env.VITE_PUBLIC_URL
-              }/assets/images/saller-1.png`}
+              }/src/assets/images/saller-1.png`}
               alt=""
             />
           </div>
@@ -28,7 +28,7 @@ export default function BestSellers({ className }) {
             <img
               src={`${
                 import.meta.env.VITE_PUBLIC_URL
-              }/assets/images/saller-2.png`}
+              }/src/assets/images/saller-2.png`}
               alt=""
             />
           </div>
@@ -45,7 +45,7 @@ export default function BestSellers({ className }) {
             <img
               src={`${
                 import.meta.env.VITE_PUBLIC_URL
-              }/assets/images/saller-3.png`}
+              }/src/assets/images/saller-3.png`}
               alt=""
             />
           </div>
@@ -62,7 +62,7 @@ export default function BestSellers({ className }) {
             <img
               src={`${
                 import.meta.env.VITE_PUBLIC_URL
-              }/assets/images/saller-4.png`}
+              }/src/assets/images/saller-4.png`}
               alt=""
             />
           </div>
@@ -79,7 +79,7 @@ export default function BestSellers({ className }) {
             <img
               src={`${
                 import.meta.env.VITE_PUBLIC_URL
-              }/assets/images/saller-5.png`}
+              }/src/assets/images/saller-5.png`}
               alt=""
             />
           </div>
@@ -96,7 +96,7 @@ export default function BestSellers({ className }) {
             <img
               src={`${
                 import.meta.env.VITE_PUBLIC_URL
-              }/assets/images/saller-6.png`}
+              }/src/assets/images/saller-6.png`}
               alt=""
             />
           </div>

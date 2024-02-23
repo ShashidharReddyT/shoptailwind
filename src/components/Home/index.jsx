@@ -1,11 +1,11 @@
 // import { useEffect, useState } from "react";
-import datas from "../../data/products.json";
-import SectionStyleFour from "../../components/Helpers/SectionStyleFour";
-import SectionStyleOne from "../Helpers/SectionStyleOne";
-import SectionStyleThree from "../Helpers/SectionStyleThree";
-import SectionStyleTwo from "../Helpers/SectionStyleTwo";
-import ViewMoreTitle from "../Helpers/ViewMoreTitle";
-import Layout from "../../components/Partials/Layout";
+import datas from "../../mock_data/products.json";
+import SectionStyleFour from "../../components/SectionStyleFour";
+import SectionStyleOne from "../../components/SectionStyleOne";
+import SectionStyleThree from "../../components/SectionStyleThree";
+import SectionStyleTwo from "../../components/SectionStyleTwo";
+import ViewMoreTitle from "../ViewMoreTitle";
+import Layout from "../Layout";
 // import Ads from "./Ads";
 import Banner from "./Banner";
 import BestSellers from "./BestSellers";
@@ -65,8 +65,8 @@ export default function Home() {
         </ViewMoreTitle>
         <ProductsAds
           ads={[
-            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-1.png`,
-            `${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-2.png`,
+            `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-1.png`,
+            `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-2.png`,
           ]}
           sectionHeight="sm:h-[295px] h-full"
           className="products-ads-section mb-[60px]"
@@ -74,7 +74,7 @@ export default function Home() {
         <SectionStyleOne
           categoryBackground={`${
             import.meta.env.VITE_PUBLIC_URL
-          }/assets/images/section-category-2.jpg`}
+          }/src/assets/images/section-category-2.jpg`}
           products={products.slice(4, products.length)}
           brands={brands}
           categoryTitle="Electronics"
@@ -83,7 +83,9 @@ export default function Home() {
           className="category-products mb-[60px]"
         />
         <ProductsAds
-          ads={[`${import.meta.env.VITE_PUBLIC_URL}/assets/images/ads-3.png`]}
+          ads={[
+            `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-3.png`,
+          ]}
           className="products-ads-section mb-[60px]"
         />
         <SectionStyleThree
@@ -94,7 +96,9 @@ export default function Home() {
         />
         <ProductsAds
           sectionHeight="164"
-          ads={[`${import.meta.env.VITE_PUBLIC_URL}assets/images/ads-4.png`]}
+          ads={[
+            `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-4.png`,
+          ]}
           className="products-ads-section mb-[60px]"
         />
         <SectionStyleFour
