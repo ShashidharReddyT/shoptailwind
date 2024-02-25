@@ -2,7 +2,6 @@
 import datas from "../../mock_data/products.json";
 import SectionStyleFour from "../../components/SectionStyleFour";
 import SectionStyleOne from "../../components/SectionStyleOne";
-import SectionStyleThree from "../../components/SectionStyleThree";
 import SectionStyleTwo from "../../components/SectionStyleTwo";
 import ViewMoreTitle from "../ViewMoreTitle";
 import Layout from "../Layout";
@@ -87,12 +86,6 @@ export default function Home() {
             `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-3.png`,
           ]}
           className="products-ads-section mb-[60px]"
-        />
-        <SectionStyleThree
-          products={products}
-          sectionTitle="New Arrivals"
-          seeMoreUrl="/all-products"
-          className="new-products mb-[60px]"
         />
         <ProductsAds
           sectionHeight="164"

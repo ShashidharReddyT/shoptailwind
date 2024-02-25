@@ -158,18 +158,6 @@
             }
           }
         },
-        "NewArrivals": {
-          "count": 2,
-          "location": "below the productcardrowstyleone",
-          "description": "a flex container",
-          "children": {
-            "SectionStyleThree": {
-              "count": 12,
-              "location": "below the productcardrowstyleone",
-              "description": "a grid container"
-            }
-          }
-        },
         "popularSales": {
           "count": 2,
           "location": "below the SectionStyleThree",
@@ -193,5 +181,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["removed the sectionstylethree component"]
 }
