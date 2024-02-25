@@ -5,9 +5,9 @@ export default function Banner({ className }) {
       <div className={`w-full ${className || ""}`}>
         <div className="container-x mx-auto">
           <div className="main-wrapper w-full">
-            <div className="banner-card xl:flex xl:space-x-[30px] xl:h-[600px]  mb-[30px]">
-              <div data-aos="fade-right" className="xl:w-[740px] w-full h-full">
-                <a to="/single-product">
+            <div className="banner-card xl:flex xl:space-x-4 xl:h-[600px] mb-4">
+              <div data-aos="fade-right" className="w-full xl:w-1/2">
+                <a href="/single-product">
                   <picture>
                     <source
                       media="(min-width:1025px)"
@@ -20,37 +20,39 @@ export default function Banner({ className }) {
                         import.meta.env.VITE_PUBLIC_URL
                       }/src/assets/images/banner-1.2.png`}
                       alt=""
-                      className="w-full max-w-full h-auto object-cover"
+                      className="w-full h-auto xl:h-full object-fill"
                     />
                   </picture>
                 </a>
               </div>
               <div
                 data-aos="fade-left"
-                className="flex-1 flex xl:flex-col flex-row  xl:space-y-[30px] h-full"
+                className="w-full xl:w-1/2 mb-4 xl:mb-0"
               >
-                <div className="w-full xl:h-1/2">
-                  <a to="/single-product">
-                    <img
-                      src={`${
-                        import.meta.env.VITE_PUBLIC_URL
-                      }/src/assets/images/banner-2.png`}
-                      alt=""
-                      className="w-full h-full"
-                    />
-                  </a>
-                </div>
-                <div className="w-full xl:h-1/2">
-                  <a to="/single-product">
-                    <img
-                      src={`${
-                        import.meta.env.VITE_PUBLIC_URL
-                      }/src/assets/images/banner-3.png`}
-                      alt=""
-                      className="w-full h-full"
-                    />
-                  </a>
-                </div>
+                <a href="/single-product">
+                  <img
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/src/assets/images/banner-3.png`}
+                    alt=""
+                    className="w-full h-auto xl:h-full object-fill"
+                  />
+                </a>
+              </div>
+
+              <div
+                data-aos="fade-left"
+                className="w-full xl:w-1/2 mb-4 xl:mb-0"
+              >
+                <a href="/single-product">
+                  <img
+                    src={`${
+                      import.meta.env.VITE_PUBLIC_URL
+                    }/src/assets/images/banner-2.png`}
+                    alt=""
+                    className="w-full h-auto xl:h-full object-fill"
+                  />
+                </a>
               </div>
             </div>
             <div
