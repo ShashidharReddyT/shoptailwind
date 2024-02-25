@@ -9,7 +9,7 @@ export default function BrandSection({ className, sectionTitle }) {
             </h1>
           </div>
         </div>
-        <div className="grid lg:grid-cols-6 sm:grid-cols-4 grid-cols-2">
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1">
           <div className="item">
             <div className="w-full h-[130px] bg-white border border-primarygray flex justify-center items-center">
               <img
