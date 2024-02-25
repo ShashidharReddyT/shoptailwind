@@ -148,17 +148,31 @@
         },
         "popularsales": {
           "count": 2,
-          "location": "center part of the page, bottom of the bestsellers",
-          "description": "a grid container"
+          "location": "below the bestsellers",
+          "description": "a flex container",
+          "children": {
+            "productcardrowstyleone": {
+              "count": 2,
+              "location": "center part of the page, bottom of the popularsales",
+              "description": "a grid container"
+            }
+          }
         },
-        "SectionStyleThree": {
-          "count": 12,
-          "location": "bottom of popularsales",
-          "description": "a grid container"
+        "NewArrivals": {
+          "count": 2,
+          "location": "below the productcardrowstyleone",
+          "description": "a flex container",
+          "children": {
+            "SectionStyleThree": {
+              "count": 12,
+              "location": "below the productcardrowstyleone",
+              "description": "a grid container"
+            }
+          }
         },
         "popularSales": {
-          "count": 1,
-          "location": "SectionStyleThree",
+          "count": 2,
+          "location": "below the SectionStyleThree",
           "popularsales-list": {
             "count": 12,
             "location": "center part of the page, bottom of the sectionstylethree",
@@ -179,5 +193,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": ["swapped sectionstyleone with the banner"]
+  "screen_and_layout_augmentations": [""]
 }
