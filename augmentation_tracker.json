@@ -100,12 +100,12 @@
     "home": {
       "count": 1,
       "location": "bottom of the navbar",
-      "description": "a container having all the cards sections",
+      "description": "a container having all the sections",
       "children": {
         "banner": {
           "count": 3,
           "location": "bottom of the navbar",
-          "description": "banner cards of images and a text with services of ecommerce"
+          "description": "banner cards and a text with flex container"
         },
         "SectionStyleOne": {
           "count": 2,
@@ -132,7 +132,7 @@
         "productcardrowstyleone": {
           "count": 1,
           "location": "bottom of the campaigncountdown",
-          "description": "a grid container"
+          "description": "cards with a grid container"
         },
         "BestSellers": {
           "count": 1,
@@ -178,7 +178,6 @@
       "description": "a footer with a flex container"
     }
   },
-  "functionality": {},
-  "sizing_updates": [],
-  "screen_and_layout_augmentations": []
+  "sizing_updates": [".."],
+  "screen_and_layout_augmentations": ["swapped sectionstyleone with the banner"]
 }
