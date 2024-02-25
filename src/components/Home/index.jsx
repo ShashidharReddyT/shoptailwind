@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import datas from "../../mock_data/products.json";
 import SectionStyleFour from "../../components/SectionStyleFour";
 import SectionStyleOne from "../../components/SectionStyleOne";
@@ -6,8 +5,6 @@ import SectionStyleThree from "../../components/SectionStyleThree";
 import SectionStyleTwo from "../../components/SectionStyleTwo";
 import ViewMoreTitle from "../ViewMoreTitle";
 import Layout from "../Layout";
-// import Ads from "./Ads";
-import Banner from "./Banner";
 import BestSellers from "./BestSellers";
 import BrandSection from "./BrandSection";
 import CampaignCountDown from "./CampaignCountDown";
@@ -19,20 +16,10 @@ export default function Home() {
   products.forEach((product) => {
     brands.push(product.brand);
   });
-  // const [ads, setAds] = useState(false);
-  // const adsHandle = () => {
-  //   setAds(false);
-  // };
-  // useEffect(() => gs
-  // {
-  //   setAds(true);
-  // }, []);
   return (
     <>
       <Layout>
-        {/* {ads && <Ads handler={adsHandle} />} */}
         <div className="btn w-5 h-5 "></div>
-        <Banner className="banner-wrapper mb-[60px]" />
         <SectionStyleOne
           products={products}
           brands={brands}

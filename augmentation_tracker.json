@@ -10,7 +10,6 @@
     "selectbox",
     "navbar",
     "drawer",
-    "banner",
     "bestseller",
     "brandsection",
     "categeorycard",
@@ -102,11 +101,6 @@
       "location": "bottom of the navbar",
       "description": "a container having all the sections",
       "children": {
-        "banner": {
-          "count": 3,
-          "location": "bottom of the navbar",
-          "description": "banner cards and a text with flex container"
-        },
         "SectionStyleOne": {
           "count": 2,
           "location": "center part of the page, bottom of the banner cards",
