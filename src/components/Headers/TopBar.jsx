@@ -1,4 +1,4 @@
-import Star from "../svg/Star";
+import Arrow from "../svg/Arrow";
 import Selectbox from "../Selectbox";
 
 export default function TopBar({ className }) {
@@ -55,16 +55,16 @@ export default function TopBar({ className }) {
                     datas={["United State", "Bangladesh", "India"]}
                   />
                   <div>
-                    <Star className="fill-current qblack" />
+                    <Arrow className="fill-current qblack" />
                   </div>
                 </div>
                 <div className="currency-select flex space-x-1 items-center">
                   <Selectbox className="w-fit" datas={["USD", "BDT"]} />
-                  <Star className="fill-current qblack" />
+                  <Arrow className="fill-current qblack" />
                 </div>
                 <div className="language-select flex space-x-1 items-center">
                   <Selectbox className="w-fit" datas={["Bangla", "english"]} />
-                  <Star className="fill-current qblack" />
+                  <Arrow className="fill-current qblack" />
                 </div>
               </div>
             </div>

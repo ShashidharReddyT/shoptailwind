@@ -1,25 +1,30 @@
 import { useEffect, useState } from "react";
 import Star from "../svg/Star";
-import {
-  categories,
-  homePageMenuItems,
-  productLayoutsMenuItems,
-  shopListMenuItems,
-  popularCategoriesMenuItems,
-  pagesMenuItems,
-} from "../constants";
+import Arrow from "../svg/Arrow";
+const categoriesList = [
+  { id: "1", category: "Mobile & Laptops" },
+  { id: "2", category: "Gaming Entertainment" },
+  { id: "3", category: "Image & Video" },
+  { id: "4", category: "Vehicles" },
+  { id: "5", category: "Furnitures" },
+  { id: "6", category: "Sport" },
+  { id: "7", category: "Food & Drinks" },
+  { id: "8", category: "Fashion Accessories" },
+  { id: "9", category: "Toilet & Sanitation" },
+  { id: "10", category: "Makeup Corner" },
+  { id: "11", category: "Baby Items" },
+];
 export default function Navbar({ className, type }) {
   const [categoryToggle, setToggle] = useState(false);
   const [elementsSize, setSize] = useState("0px");
+  const toggleHandler = () => setToggle(!categoryToggle);
   const handler = () => {
     setToggle(!categoryToggle);
   };
   useEffect(() => {
     if (categoryToggle) {
       const getItems = document.querySelectorAll(`.categories-list li`).length;
-      if (categoryToggle && getItems > 0) {
-        setSize(`${42 * getItems}px`);
-      }
+      setSize(categoryToggle && getItems > 0 ? `${42 * getItems}px` : `0px`);
     } else {
       setSize(`0px`);
     }
@@ -42,50 +47,63 @@ export default function Navbar({ className, type }) {
                 >
                   <div className="flex space-x-3 items-center">
                     <span>
-                      <Star />
+                      <svg
+                        className="fill-current"
+                        width="14"
+                        height="9"
+                        viewBox="0 0 14 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="14" height="1" />
+                        <rect y="8" width="14" height="1" />
+                        <rect y="4" width="10" height="1" />
+                      </svg>
                     </span>
                     <span className="text-sm font-600 text-qblacktext">
                       All Categories
                     </span>
                   </div>
                   <div>
-                    <Star />
+                    <Arrow
+                      width="5.78538"
+                      height="1.28564"
+                      className="fill-current text-qblacktext"
+                    />
                   </div>
                 </button>
                 {categoryToggle && (
                   <div
                     className="fixed top-0 left-0 w-full h-full -z-10"
-                    onClick={handler}
+                    onClick={toggleHandler}
                   ></div>
                 )}
                 <div
                   className="category-dropdown w-full absolute left-0 top-[53px] overflow-hidden"
-                  style={{ height: `${elementsSize} ` }}
+                  style={{ height: elementsSize }}
                 >
                   <ul className="categories-list">
-                    {categories.map((category, index) => (
-                      <li key={index} className="category-item">
-                        <div
-                          className={`flex justify-between items-center px-5 h-10 bg-white  transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
-                            type === 3
-                              ? "hover:bg-qh3-blue hover:text-white"
-                              : "hover:bg-qyellow"
-                          }`}
-                        >
-                          <div className="flex items-center space-x-6">
-                            <span>
+                    {categoriesList.map((category) => (
+                      <li className="category-item" key={category.id}>
+                        <a to="">
+                          <div
+                            className={`flex justify-between items-center px-5 h-10 bg-white transition-all duration-300 ease-in-out cursor-pointer text-qblack ${
+                              type === 3
+                                ? "hover:bg-qh3-blue hover:text-white"
+                                : "hover:bg-qyellow"
+                            }`}
+                          >
+                            <div className="flex items-center space-x-6">
                               <Star />
-                            </span>
-                            <span className="text-xs font-400">
-                              {category.name}
-                            </span>
-                          </div>
-                          <div>
-                            <span>
+                              <span className="text-xs font-400">
+                                {category.category}
+                              </span>
+                            </div>
+                            <div>
                               <Star />
-                            </span>
+                            </div>
                           </div>
-                        </div>
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -101,7 +119,7 @@ export default function Navbar({ className, type }) {
                     >
                       <span>Homepage</span>
                       <span className="ml-1.5 ">
-                        <Star />
+                        <Star className="fill-current" />
                       </span>
                     </span>
                     <div className="sub-menu w-[220px] absolute left-0 top-[60px]">
@@ -115,17 +133,25 @@ export default function Navbar({ className, type }) {
                           <div>
                             <div className="category-items">
                               <ul className="flex flex-col space-y-2">
-                                {homePageMenuItems.map((item, index) => (
-                                  <li key={index}>
-                                    <span
-                                      className={`text-qgray text-sm font-400 border-b border-transparent ${
-                                        type === 3
-                                          ? "hover:text-qh3-blue hover:border-qh3-blue"
-                                          : "hover:text-qyellow hover:border-qyellow"
-                                      }`}
-                                    >
-                                      {item.name}
-                                    </span>
+                                {[
+                                  { label: "Home One" },
+                                  { label: "Home Two" },
+                                  { label: "Home Three" },
+                                  { label: "Home Four" },
+                                  { label: "Home Five" },
+                                ].map((menuItem) => (
+                                  <li key={menuItem.label}>
+                                    <a to="">
+                                      <span
+                                        className={`text-qgray text-sm font-400 border-b border-transparent ${
+                                          type === 3
+                                            ? "hover:text-qh3-blue hover:border-qh3-blue"
+                                            : "hover:text-qyellow hover:border-qyellow"
+                                        }`}
+                                      >
+                                        {menuItem.label}
+                                      </span>
+                                    </a>
                                   </li>
                                 ))}
                               </ul>
@@ -143,7 +169,7 @@ export default function Navbar({ className, type }) {
                     >
                       <span>Shop</span>
                       <span className="ml-1.5 ">
-                        <Star />
+                        <Star className="fill-current" />
                       </span>
                     </span>
                     <div className="sub-menu w-full absolute left-0 top-[60px]">
@@ -155,81 +181,63 @@ export default function Navbar({ className, type }) {
                         }}
                       >
                         <div className="categories-wrapper flex-1 h-full flex justify-around -ml-[70px]">
-                          <div>
-                            <div className="category">
-                              <h1 className="text-[13px] font-700 text-qblack uppercase mb-[13px]">
-                                Shop List
-                              </h1>
-                            </div>
-                            <div className="category-items">
-                              <ul className="flex flex-col space-y-2">
-                                {shopListMenuItems.map((item, index) => (
-                                  <li key={index}>
-                                    <span
-                                      className={`text-qgray text-sm font-400 border-b border-transparent ${
-                                        type === 3
-                                          ? "hover:text-qh3-blue hover:border-qh3-blue"
-                                          : "hover:text-qyellow hover:border-qyellow"
-                                      }`}
-                                    >
-                                      {item.name}
-                                    </span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="category">
-                              <h1 className="text-[13px] font-700 text-qblack uppercase mb-[13px]">
-                                Product Layouts
-                              </h1>
-                            </div>
-                            <div className="category-items">
-                              <ul className="flex flex-col space-y-2">
-                                {productLayoutsMenuItems.map((item, index) => (
-                                  <li key={index}>
-                                    <span
-                                      className={`text-qgray text-sm font-400 border-b border-transparent ${
-                                        type === 3
-                                          ? "hover:text-qh3-blue hover:border-qh3-blue"
-                                          : "hover:text-qyellow hover:border-qyellow"
-                                      }`}
-                                    >
-                                      {item.name}
-                                    </span>
-                                  </li>
-                                ))}
-                                New 2:38
-                              </ul>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="category">
-                              <h1 className="text-[13px] font-700 text-qblack uppercase mb-[13px]">
-                                Polular Category
-                              </h1>
-                            </div>
-                            <div className="category-items">
-                              <ul className="flex flex-col space-y-2">
-                                {popularCategoriesMenuItems.map(
-                                  (category, index) => (
+                          {[
+                            {
+                              label: "Shop List",
+                              items: [
+                                "Shop Sidebar",
+                                "Shop Fullwidth",
+                                "Shop Category Icon",
+                                "Shop Category Icon",
+                                "Shop List View",
+                              ],
+                            },
+                            {
+                              label: "Product Layouts",
+                              items: [
+                                "Horizonral Thumbnail",
+                                "Vertical Thumbnail",
+                                "Gallery Thumbnail",
+                                "Sticky Summary",
+                              ],
+                            },
+                            {
+                              label: "Popular Category",
+                              items: [
+                                "Phone & Tablet",
+                                "Gaming & Sports",
+                                "Home Appliance",
+                                "Fashion Clothes",
+                              ],
+                            },
+                          ].map((menuGroup) => (
+                            <div key={menuGroup.label}>
+                              <div className="category">
+                                <h1 className="text-[13px] font-700 text-qblack uppercase mb-[13px]">
+                                  {menuGroup.label}
+                                </h1>
+                              </div>
+                              <div className="category-items">
+                                <ul className="flex flex-col space-y-2">
+                                  {menuGroup.items.map((menuItem, index) => (
                                     <li key={index}>
-                                      <span
-                                        className={`text-qgray text-sm font-400 border-b border-transparent ${
-                                          type === 3
-                                            ? "hover:text-qh3-blue hover:border-qh3-blue"
-                                            : "hover:text-qyellow hover:border-qyellow"
-                                        }`}
-                                      >
-                                        {category.name}
-                                      </span>
+                                      <a to="">
+                                        <span
+                                          className={`text-qgray text-sm font-400 border-b border-transparent ${
+                                            type === 3
+                                              ? "hover:text-qh3-blue hover:border-qh3-blue"
+                                              : "hover:text-qyellow hover:border-qyellow"
+                                          }`}
+                                        >
+                                          {menuItem}
+                                        </span>
+                                      </a>
                                     </li>
-                                  )
-                                )}
-                              </ul>
+                                  ))}
+                                </ul>
+                              </div>
                             </div>
-                          </div>
+                          ))}
                         </div>
                         <div className="thumbnil w-[348px] h-full">
                           <div className="w-full h-[235px]">
@@ -254,22 +262,28 @@ export default function Navbar({ className, type }) {
                     >
                       <span>Pages</span>
                       <span className="ml-1.5 ">
-                        <Star />
+                        <Star className="fill-current" />
                       </span>
                     </span>
                     <div className="sub-menu w-[220px] absolute left-0 top-[60px]">
                       <div
-                        className="w-full bg-white flex justify-between items-center "
+                        className="w-full bg-white flex justify-between items-center"
                         style={{
                           boxShadow: "0px 15px 50px 0px rgba(0, 0, 0, 0.14)",
                         }}
                       >
                         <div className="categories-wrapper w-full h-full p-5">
-                          <div>
-                            <div className="category-items">
-                              <ul className="flex flex-col space-y-2">
-                                {pagesMenuItems.map((item, index) => (
-                                  <li key={index}>
+                          <div className="category-items">
+                            <ul className="flex flex-col space-y-2">
+                              {[
+                                { label: "Privacy Policy" },
+                                { label: "Terms and Conditions" },
+                                { label: "FAQ" },
+                                { label: "Shop Category Icon" },
+                                { label: "Shop List View" },
+                              ].map((menuItem, index) => (
+                                <li key={index}>
+                                  <a to="">
                                     <span
                                       className={`text-qgray text-sm font-400 border-b border-transparent ${
                                         type === 3
@@ -277,55 +291,61 @@ export default function Navbar({ className, type }) {
                                           : "hover:text-qyellow hover:border-qyellow"
                                       }`}
                                     >
-                                      {item.name}
+                                      {menuItem.label}
                                     </span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
                         </div>
                       </div>
                     </div>
                   </li>
                   <li>
-                    <span
-                      className={`flex items-center text-sm font-600 cursor-pointer ${
-                        type === 3 ? "text-white" : "text-qblacktext"
-                      }`}
-                    >
-                      <span>About</span>
-                    </span>
+                    <a to="/about">
+                      <span
+                        className={`flex items-center text-sm font-600 cursor-pointer ${
+                          type === 3 ? "text-white" : "text-qblacktext"
+                        }`}
+                      >
+                        <span>About</span>
+                      </span>
+                    </a>
                   </li>
                   <li>
-                    <span
-                      className={`flex items-center text-sm font-600 cursor-pointer ${
-                        type === 3 ? "text-white" : "text-qblacktext"
-                      }`}
-                    >
-                      <span>Blog</span>
-                    </span>
+                    <a to="/blogs">
+                      <span
+                        className={`flex items-center text-sm font-600 cursor-pointer ${
+                          type === 3 ? "text-white" : "text-qblacktext"
+                        }`}
+                      >
+                        <span>Blog</span>
+                      </span>
+                    </a>
                   </li>
                   <li>
-                    <span
-                      className={`flex items-center text-sm font-600 cursor-pointer ${
-                        type === 3 ? "text-white" : "text-qblacktext"
-                      }`}
-                    >
-                      <span>Contact</span>
-                    </span>
+                    <a to="/contact">
+                      <span
+                        className={`flex items-center text-sm font-600 cursor-pointer ${
+                          type === 3 ? "text-white" : "text-qblacktext"
+                        }`}
+                      >
+                        <span>Contact</span>
+                      </span>
+                    </a>
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className="become-seller-btn">
-              <div className="black-btn w-[161px] h-[40px] flex justify-center items-center cursor-pointer">
-                <div className="flex space-x-2 items-center">
-                  <span className="text-sm font-600">Become a Seller</span>
-                  <span>
-                    <Star />
-                  </span>
-                </div>
+              <div className="become-seller-btn">
+                <a to="/become-saller">
+                  <div className="black-btn w-[161px] h-[40px] flex justify-center items-center cursor-pointer">
+                    <div className="flex space-x-2 items-center">
+                      <span className="text-sm font-600">Become a Seller</span>
+                      <Star />
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
