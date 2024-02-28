@@ -192,6 +192,6 @@
       "description": "a footer with a flex container"
     }
   },
-  "sizing_updates": [".."],
-  "screen_and_layout_augmentations": ["Brand section is resized"]
+  "sizing_updates": ["Brand section is resized"],
+  "screen_and_layout_augmentations": [".."]
 }
