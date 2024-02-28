@@ -63,6 +63,10 @@ export default function Home() {
         >
           <BestSellers />
         </ViewMoreTitle>
+        <BrandSection
+          sectionTitle="Shop by Brand brandsection1"
+          className="brand-section-wrapper mb-[60px]"
+        />
         <ProductsAds
           ads={[
             `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-1.png`,
@@ -106,6 +110,12 @@ export default function Home() {
           sectionTitle="Popular Sales"
           seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
+        />
+        <SectionStyleThree
+          products={products}
+          sectionTitle="New Arrivals"
+          seeMoreUrl="/all-products"
+          className="new-products mb-[60px]"
         />
       </Layout>
     </>

@@ -146,6 +146,18 @@
             }
           }
         },
+        "brandsection1": {
+          "count": 1,
+          "location": "full width of the brand cards bottom of the sectionstyleone",
+          "description": "a flex container",
+          "children": {
+            "brandcards": {
+              "count": 12,
+              "location": "bottom of the sectionstyleone",
+              "description": "cards with grid container having brand images."
+            }
+          }
+        },
         "popularsales": {
           "count": 2,
           "location": "below the bestsellers",
@@ -193,5 +205,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["brand section added"]
 }
