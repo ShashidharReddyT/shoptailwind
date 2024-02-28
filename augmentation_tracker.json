@@ -192,6 +192,6 @@
       "description": "a footer with a flex container"
     }
   },
-  "sizing_updates": [".."],
-  "screen_and_layout_augmentations": ["sectionstylethree is resized"]
+  "sizing_updates": ["sectionstylethree is resized"],
+  "screen_and_layout_augmentations": [""]
 }
