@@ -18,9 +18,11 @@ export default function Navbar({ className, type }) {
   const [categoryToggle, setToggle] = useState(false);
   const [elementsSize, setSize] = useState("0px");
   const toggleHandler = () => setToggle(!categoryToggle);
+
   const handler = () => {
     setToggle(!categoryToggle);
   };
+
   useEffect(() => {
     if (categoryToggle) {
       const getItems = document.querySelectorAll(`.categories-list li`).length;
