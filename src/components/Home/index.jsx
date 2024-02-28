@@ -41,6 +41,13 @@ export default function Home() {
           seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
         />
+        <ViewMoreTitle
+          className="top-selling-product mb-[60px]"
+          seeMoreUrl="/all-products"
+          categoryTitle="Top Selling Products"
+        >
+          <SectionStyleTwo products={products.slice(3, products.length)} />
+        </ViewMoreTitle>
         <BrandSection
           sectionTitle="Shop by Brand"
           className="brand-section-wrapper mb-[60px]"
@@ -49,13 +56,7 @@ export default function Home() {
           className="mb-[60px]"
           lastDate="2023-10-04 4:00:00"
         />
-        <ViewMoreTitle
-          className="top-selling-product mb-[60px]"
-          seeMoreUrl="/all-products"
-          categoryTitle="Top Selling Products"
-        >
-          <SectionStyleTwo products={products.slice(3, products.length)} />
-        </ViewMoreTitle>
+
         <ViewMoreTitle
           className="best-sallers-section mb-[60px]"
           seeMoreUrl="/sallers"
