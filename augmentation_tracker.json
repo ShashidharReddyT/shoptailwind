@@ -107,11 +107,6 @@
           "location": "bottom of the navbar",
           "description": "banner cards and a text with flex container"
         },
-        "SectionStyleOne": {
-          "count": 2,
-          "location": "center part of the page, bottom of the banner cards",
-          "description": "a flex container"
-        },
         "brandsection": {
           "count": 1,
           "location": "full width of the brand cards bottom of the sectionstyleone",
@@ -193,5 +188,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["dropped down sectionstyleone"]
 }
