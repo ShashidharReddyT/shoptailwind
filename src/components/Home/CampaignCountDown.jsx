@@ -7,7 +7,6 @@ export default function CampaignCountDown({
   appscreen,
 }) {
   const { showDate, showHour, showMinute, showSecound } = CountDown(lastDate);
-
   return (
     <div>
       <div className={`w-full lg:h-[460px] ${className || ""}`}>
