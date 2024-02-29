@@ -88,12 +88,6 @@ export default function Home() {
           ]}
           className="products-ads-section mb-[60px]"
         />
-        <SectionStyleThree
-          products={products}
-          sectionTitle="New Arrivals"
-          seeMoreUrl="/all-products"
-          className="new-products mb-[60px]"
-        />
         <ProductsAds
           sectionHeight="164"
           ads={[
