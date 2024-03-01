@@ -124,14 +124,21 @@
             }
           }
         },
-        "CampaignCountDown": {
+        "NewArrivals": {
           "count": 2,
-          "location": "bottom of the brandsection",
-          "description": "a text heading inside card"
+          "location": "below the brandsection",
+          "description": "a flex container",
+          "children": {
+            "SectionStyleThree": {
+              "count": 12,
+              "location": "below the productcardrowstyleone",
+              "description": "a grid container"
+            }
+          }
         },
         "productcardrowstyleone": {
           "count": 1,
-          "location": "bottom of the campaigncountdown",
+          "location": "bottom of the NewArrivals",
           "description": "cards with a grid container"
         },
         "BestSellers": {
@@ -158,17 +165,10 @@
             }
           }
         },
-        "NewArrivals": {
+        "CampaignCountDown": {
           "count": 2,
-          "location": "below the productcardrowstyleone",
-          "description": "a flex container",
-          "children": {
-            "SectionStyleThree": {
-              "count": 12,
-              "location": "below the productcardrowstyleone",
-              "description": "a grid container"
-            }
-          }
+          "location": "bottom of the popularsales",
+          "description": "a text heading inside card"
         },
         "popularSales": {
           "count": 2,
@@ -193,5 +193,7 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": [
+    "campaigncountdown swapped with sectionstyleone"
+  ]
 }
