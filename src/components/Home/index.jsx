@@ -45,10 +45,7 @@ export default function Home() {
           sectionTitle="Shop by Brand"
           className="brand-section-wrapper mb-[60px]"
         />
-        <CampaignCountDown
-          className="mb-[60px]"
-          lastDate="2023-10-04 4:00:00"
-        />
+
         <ViewMoreTitle
           className="top-selling-product mb-[60px]"
           seeMoreUrl="/all-products"
@@ -56,6 +53,10 @@ export default function Home() {
         >
           <SectionStyleTwo products={products.slice(3, products.length)} />
         </ViewMoreTitle>
+        <CampaignCountDown
+          className="mb-[60px]"
+          lastDate="2023-10-04 4:00:00"
+        />
         <ViewMoreTitle
           className="best-sallers-section mb-[60px]"
           seeMoreUrl="/sallers"
