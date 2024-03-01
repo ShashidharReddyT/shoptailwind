@@ -102,10 +102,17 @@
       "location": "bottom of the navbar",
       "description": "a container having all the sections",
       "children": {
-        "banner": {
-          "count": 3,
+        "BestSellers": {
+          "count": 1,
           "location": "bottom of the navbar",
-          "description": "banner cards and a text with flex container"
+          "description": "a text heading and view-more-title on right",
+          "children": {
+            "section-content": {
+              "count": 1,
+              "location": "bottom of the BestSellers section",
+              "description": "a grid container"
+            }
+          }
         },
         "SectionStyleOne": {
           "count": 2,
@@ -134,17 +141,10 @@
           "location": "bottom of the campaigncountdown",
           "description": "cards with a grid container"
         },
-        "BestSellers": {
-          "count": 1,
-          "location": "bottom of the sectionstyle",
-          "description": "a text heading and view-more-title on right",
-          "children": {
-            "section-content": {
-              "count": 1,
-              "location": "bottom of the BestSellers section",
-              "description": "a grid container"
-            }
-          }
+        "banner": {
+          "count": 3,
+          "location": "bottom of the productcardrowstyleone",
+          "description": "banner cards and a text with flex container"
         },
         "popularsales": {
           "count": 2,

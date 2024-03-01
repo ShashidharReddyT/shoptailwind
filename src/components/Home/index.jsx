@@ -32,7 +32,13 @@ export default function Home() {
       <Layout>
         {/* {ads && <Ads handler={adsHandle} />} */}
         <div className="btn w-5 h-5 "></div>
-        <Banner className="banner-wrapper mb-[60px]" />
+        <ViewMoreTitle
+          className="best-sallers-section mb-[60px]"
+          seeMoreUrl="/sallers"
+          categoryTitle="Best Saller"
+        >
+          <BestSellers />
+        </ViewMoreTitle>
         <SectionStyleOne
           products={products}
           brands={brands}
@@ -56,13 +62,7 @@ export default function Home() {
         >
           <SectionStyleTwo products={products.slice(3, products.length)} />
         </ViewMoreTitle>
-        <ViewMoreTitle
-          className="best-sallers-section mb-[60px]"
-          seeMoreUrl="/sallers"
-          categoryTitle="Best Saller"
-        >
-          <BestSellers />
-        </ViewMoreTitle>
+        <Banner className="banner-wrapper mb-[60px]" />
         <ProductsAds
           ads={[
             `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-1.png`,
