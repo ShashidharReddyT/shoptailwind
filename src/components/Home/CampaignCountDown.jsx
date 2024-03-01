@@ -171,6 +171,71 @@ export default function CampaignCountDown({
                 </div>
               </div>
             </div>
+            <div
+              data-aos="fade-left"
+              className="download-app flex-1 lg:h-full h-[430px] xl:p-12 p-5"
+              style={{
+                background: `url(${
+                  counterbg ||
+                  `${
+                    import.meta.env.VITE_PUBLIC_URL
+                  }/src/assets/images/download-app-cover.png`
+                }) no-repeat`,
+                backgroundSize: "cover",
+              }}
+            >
+              <div className="flex flex-col h-full justify-between">
+                <div className="get-app">
+                  <p className="text-[13px] font-600 text-qblack mb-3">
+                    MOBILE APP VERSION
+                  </p>
+                  <h1 className="text-[30px] font-600 text-qblack leading-10 mb-8">
+                    Get Our
+                    <span className="text-qred border-b-2 border-qred mx-2">
+                      Mobile App
+                    </span>
+                    <br /> It’s Make easy for you life !
+                  </h1>
+                  <div className="flex space-x-5 items-center">
+                    <div>
+                      <a href="#">
+                        <img
+                          width="170"
+                          height="69"
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/src/assets/images/play-store.png`}
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div>
+                      <a href="#">
+                        <img
+                          width="170"
+                          height="69"
+                          src={`${
+                            import.meta.env.VITE_PUBLIC_URL
+                          }/src/assets/images/apple-store.png`}
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="app-screen">
+                  <img
+                    src={
+                      appscreen ||
+                      `${
+                        import.meta.env.VITE_PUBLIC_URL
+                      }/src/assets/images/app-screen.png`
+                    }
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
