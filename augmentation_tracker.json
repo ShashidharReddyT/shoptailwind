@@ -124,14 +124,18 @@
             }
           }
         },
-        "CampaignCountDown": {
+        "popularSales": {
           "count": 2,
-          "location": "bottom of the brandsection",
-          "description": "a text heading inside card"
+          "location": "below the brandsection",
+          "popularsales-list": {
+            "count": 12,
+            "location": "center part of the page, bottom of the brandsection",
+            "description": "a grid container"
+          }
         },
         "productcardrowstyleone": {
           "count": 1,
-          "location": "bottom of the campaigncountdown",
+          "location": "center part of the page, bottom of the popularsales",
           "description": "cards with a grid container"
         },
         "BestSellers": {
@@ -170,18 +174,14 @@
             }
           }
         },
-        "popularSales": {
+        "CampaignCountDown": {
           "count": 2,
-          "location": "below the SectionStyleThree",
-          "popularsales-list": {
-            "count": 12,
-            "location": "center part of the page, bottom of the sectionstylethree",
-            "description": "a grid container"
-          }
+          "location": "bottom of the sectionstylethree",
+          "description": "a text heading inside card"
         },
         "discountbanner": {
           "count": 1,
-          "location": "below the popular sales",
+          "location": "below the campaigncountdown",
           "description": "a ads image with gmail address get the coupon button"
         }
       }
@@ -193,5 +193,7 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": [
+    "swapped CampaignCountDown with sectionstylefour"
+  ]
 }
