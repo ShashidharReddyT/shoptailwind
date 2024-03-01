@@ -14,7 +14,6 @@
     "bestseller",
     "brandsection",
     "categeorycard",
-    "campaigncountdown",
     "countdown",
     "discountbanner",
     "productads",
@@ -124,11 +123,6 @@
             }
           }
         },
-        "CampaignCountDown": {
-          "count": 2,
-          "location": "bottom of the brandsection",
-          "description": "a text heading inside card"
-        },
         "productcardrowstyleone": {
           "count": 1,
           "location": "bottom of the campaigncountdown",
@@ -193,5 +187,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["campaigncountdown dropped down"]
 }
