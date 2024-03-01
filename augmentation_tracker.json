@@ -77,7 +77,6 @@
       "count": 1,
       "location": "below the middlebar",
       "description": "a flex container",
-
       "children": {
         "Allcategories": {
           "count": 1,
@@ -124,16 +123,6 @@
             }
           }
         },
-        "CampaignCountDown": {
-          "count": 2,
-          "location": "bottom of the brandsection",
-          "description": "a text heading inside card"
-        },
-        "productcardrowstyleone": {
-          "count": 1,
-          "location": "bottom of the campaigncountdown",
-          "description": "cards with a grid container"
-        },
         "BestSellers": {
           "count": 1,
           "location": "bottom of the sectionstyle",
@@ -145,6 +134,16 @@
               "description": "a grid container"
             }
           }
+        },
+        "productcardrowstyleone": {
+          "count": 1,
+          "location": "bottom of the campaigncountdown",
+          "description": "cards with a grid container"
+        },
+        "CampaignCountDown": {
+          "count": 2,
+          "location": "bottom of the brandsection",
+          "description": "a text heading inside card"
         },
         "popularsales": {
           "count": 2,
@@ -193,5 +192,7 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": [
+    "swapped bestseller with campaign countdown"
+  ]
 }

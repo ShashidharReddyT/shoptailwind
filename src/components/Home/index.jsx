@@ -45,17 +45,6 @@ export default function Home() {
           sectionTitle="Shop by Brand"
           className="brand-section-wrapper mb-[60px]"
         />
-        <CampaignCountDown
-          className="mb-[60px]"
-          lastDate="2023-10-04 4:00:00"
-        />
-        <ViewMoreTitle
-          className="top-selling-product mb-[60px]"
-          seeMoreUrl="/all-products"
-          categoryTitle="Top Selling Products"
-        >
-          <SectionStyleTwo products={products.slice(3, products.length)} />
-        </ViewMoreTitle>
         <ViewMoreTitle
           className="best-sallers-section mb-[60px]"
           seeMoreUrl="/sallers"
@@ -63,6 +52,18 @@ export default function Home() {
         >
           <BestSellers />
         </ViewMoreTitle>
+        <ViewMoreTitle
+          className="top-selling-product mb-[60px]"
+          seeMoreUrl="/all-products"
+          categoryTitle="Top Selling Products"
+        >
+          <SectionStyleTwo products={products.slice(3, products.length)} />
+        </ViewMoreTitle>
+
+        <CampaignCountDown
+          className="mb-[60px]"
+          lastDate="2023-10-04 4:00:00"
+        />
         <ProductsAds
           ads={[
             `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-1.png`,
