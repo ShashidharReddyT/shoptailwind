@@ -77,7 +77,6 @@
       "count": 1,
       "location": "below the middlebar",
       "description": "a flex container",
-
       "children": {
         "Allcategories": {
           "count": 1,
@@ -102,10 +101,10 @@
       "location": "bottom of the navbar",
       "description": "a container having all the sections",
       "children": {
-        "banner": {
-          "count": 3,
+        "CampaignCountDown": {
+          "count": 2,
           "location": "bottom of the navbar",
-          "description": "banner cards and a text with flex container"
+          "description": "a text heading inside card"
         },
         "SectionStyleOne": {
           "count": 2,
@@ -124,14 +123,14 @@
             }
           }
         },
-        "CampaignCountDown": {
-          "count": 2,
+        "banner": {
+          "count": 3,
           "location": "bottom of the brandsection",
-          "description": "a text heading inside card"
+          "description": "banner cards and a text with flex container"
         },
         "productcardrowstyleone": {
           "count": 1,
-          "location": "bottom of the campaigncountdown",
+          "location": "bottom of the banner",
           "description": "cards with a grid container"
         },
         "BestSellers": {
@@ -193,5 +192,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["campaigncountdown swapped with banner"]
 }
