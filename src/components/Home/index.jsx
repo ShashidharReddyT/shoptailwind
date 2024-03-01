@@ -33,6 +33,14 @@ export default function Home() {
         {/* {ads && <Ads handler={adsHandle} />} */}
         <div className="btn w-5 h-5 "></div>
         <Banner className="banner-wrapper mb-[60px]" />
+        <CampaignCountDown
+          className="mb-[60px]"
+          lastDate="2023-10-04 4:00:00"
+        />
+        <BrandSection
+          sectionTitle="Shop by Brand"
+          className="brand-section-wrapper mb-[60px]"
+        />
         <SectionStyleOne
           products={products}
           brands={brands}
@@ -40,14 +48,6 @@ export default function Home() {
           sectionTitle="Gamer World"
           seeMoreUrl="/all-products"
           className="category-products mb-[60px]"
-        />
-        <BrandSection
-          sectionTitle="Shop by Brand"
-          className="brand-section-wrapper mb-[60px]"
-        />
-        <CampaignCountDown
-          className="mb-[60px]"
-          lastDate="2023-10-04 4:00:00"
         />
         <ViewMoreTitle
           className="top-selling-product mb-[60px]"
