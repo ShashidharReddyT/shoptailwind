@@ -33,14 +33,13 @@ export default function Home() {
         {/* {ads && <Ads handler={adsHandle} />} */}
         <div className="btn w-5 h-5 "></div>
         <Banner className="banner-wrapper mb-[60px]" />
-        <SectionStyleOne
-          products={products}
-          brands={brands}
-          categoryTitle="Mobile & Tablet"
-          sectionTitle="Gamer World"
-          seeMoreUrl="/all-products"
-          className="category-products mb-[60px]"
-        />
+        <ViewMoreTitle
+          className="best-sallers-section mb-[60px]"
+          seeMoreUrl="/sallers"
+          categoryTitle="Best Saller"
+        >
+          <BestSellers />
+        </ViewMoreTitle>
         <BrandSection
           sectionTitle="Shop by Brand"
           className="brand-section-wrapper mb-[60px]"
@@ -56,13 +55,15 @@ export default function Home() {
         >
           <SectionStyleTwo products={products.slice(3, products.length)} />
         </ViewMoreTitle>
-        <ViewMoreTitle
-          className="best-sallers-section mb-[60px]"
-          seeMoreUrl="/sallers"
-          categoryTitle="Best Saller"
-        >
-          <BestSellers />
-        </ViewMoreTitle>
+
+        <SectionStyleOne
+          products={products}
+          brands={brands}
+          categoryTitle="Mobile & Tablet"
+          sectionTitle="Gamer World"
+          seeMoreUrl="/all-products"
+          className="category-products mb-[60px]"
+        />
         <ProductsAds
           ads={[
             `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-1.png`,

@@ -77,7 +77,6 @@
       "count": 1,
       "location": "below the middlebar",
       "description": "a flex container",
-
       "children": {
         "Allcategories": {
           "count": 1,
@@ -107,10 +106,17 @@
           "location": "bottom of the navbar",
           "description": "banner cards and a text with flex container"
         },
-        "SectionStyleOne": {
-          "count": 2,
+        "BestSellers": {
+          "count": 1,
           "location": "center part of the page, bottom of the banner cards",
-          "description": "a flex container"
+          "description": "a text heading and view-more-title on right",
+          "children": {
+            "section-content": {
+              "count": 1,
+              "location": "bottom of the BestSellers section",
+              "description": "a grid container"
+            }
+          }
         },
         "brandsection": {
           "count": 1,
@@ -134,18 +140,12 @@
           "location": "bottom of the campaigncountdown",
           "description": "cards with a grid container"
         },
-        "BestSellers": {
-          "count": 1,
-          "location": "bottom of the sectionstyle",
-          "description": "a text heading and view-more-title on right",
-          "children": {
-            "section-content": {
-              "count": 1,
-              "location": "bottom of the BestSellers section",
-              "description": "a grid container"
-            }
-          }
+        "SectionStyleOne": {
+          "count": 2,
+          "location": "center part of the page, bottom of the banner cards",
+          "description": "a flex container"
         },
+
         "popularsales": {
           "count": 2,
           "location": "below the bestsellers",
@@ -193,5 +193,7 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": [
+    "swapped bestseller  with sectionstyleone"
+  ]
 }
