@@ -146,6 +146,15 @@
             }
           }
         },
+        "popularSales1": {
+          "count": 2,
+          "location": "below the bestsellers",
+          "popularsales-list": {
+            "count": 12,
+            "location": "center part of the page, bottom of the bestseller",
+            "description": "a grid container"
+          }
+        },
         "popularsales": {
           "count": 2,
           "location": "below the bestsellers",
@@ -193,5 +202,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["added sectionstylefour after bestseller"]
 }

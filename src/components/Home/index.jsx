@@ -63,6 +63,12 @@ export default function Home() {
         >
           <BestSellers />
         </ViewMoreTitle>
+        <SectionStyleFour
+          products={products}
+          sectionTitle="Popular Sales popularSales1"
+          seeMoreUrl="/all-products"
+          className="category-products mb-[60px]"
+        />
         <ProductsAds
           ads={[
             `${import.meta.env.VITE_PUBLIC_URL}/src/assets/images/ads-1.png`,
