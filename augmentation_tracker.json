@@ -134,18 +134,19 @@
           "location": "bottom of the campaigncountdown",
           "description": "cards with a grid container"
         },
-        "BestSellers": {
-          "count": 1,
-          "location": "bottom of the sectionstyle",
-          "description": "a text heading and view-more-title on right",
+        "NewArrivals": {
+          "count": 2,
+          "location": "below the productcardrowstyleone",
+          "description": "a flex container",
           "children": {
-            "section-content": {
-              "count": 1,
-              "location": "bottom of the BestSellers section",
+            "SectionStyleThree": {
+              "count": 12,
+              "location": "below the productcardrowstyleone",
               "description": "a grid container"
             }
           }
         },
+
         "popularsales": {
           "count": 2,
           "location": "below the bestsellers",
@@ -158,14 +159,14 @@
             }
           }
         },
-        "NewArrivals": {
-          "count": 2,
-          "location": "below the productcardrowstyleone",
-          "description": "a flex container",
+        "BestSellers": {
+          "count": 1,
+          "location": "bottom of the sectionstyle",
+          "description": "a text heading and view-more-title on right",
           "children": {
-            "SectionStyleThree": {
-              "count": 12,
-              "location": "below the productcardrowstyleone",
+            "section-content": {
+              "count": 1,
+              "location": "bottom of the BestSellers section",
               "description": "a grid container"
             }
           }
@@ -193,5 +194,7 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": [
+    "swapped bestseller with sectionstylethreee"
+  ]
 }
