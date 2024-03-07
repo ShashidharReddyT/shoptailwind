@@ -79,11 +79,6 @@
       "description": "a flex container",
 
       "children": {
-        "Allcategories": {
-          "count": 1,
-          "location": "left side in the navbar",
-          "description": "a list of all the categories"
-        },
         "nav-wrapper": {
           "count": 1,
           "location": "middle of the page",
@@ -193,5 +188,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["inside navbar all categories is deleted"]
 }
