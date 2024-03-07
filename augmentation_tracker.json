@@ -60,11 +60,6 @@
           "location": "left side in the middlebar",
           "description": "a logo on the left side"
         },
-        "searchbox": {
-          "count": 2,
-          "location": "middle of the page",
-          "description": "a flex container"
-        },
         "profileButtons": {
           "count": 4,
           "location": "right side in the middlebar",
@@ -193,5 +188,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["inside middlebar searchbox is deleted"]
 }
