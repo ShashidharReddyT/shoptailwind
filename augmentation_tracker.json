@@ -77,17 +77,11 @@
       "count": 1,
       "location": "below the middlebar",
       "description": "a flex container",
-
       "children": {
         "Allcategories": {
           "count": 1,
           "location": "left side in the navbar",
           "description": "a list of all the categories"
-        },
-        "nav-wrapper": {
-          "count": 1,
-          "location": "middle of the page",
-          "description": "a flex container"
         },
         "become-seller-btn": {
           "count": 1,
@@ -193,5 +187,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["inside navbar nav-wrapper is deleted"]
 }
