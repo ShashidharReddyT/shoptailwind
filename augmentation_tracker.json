@@ -37,11 +37,6 @@
       "location": "top of the page",
       "description": "a text with a flex container",
       "children": {
-        "topbar-nav": {
-          "count": 3,
-          "location": "left side in the topbar",
-          "description": "a text of list items on the left side of the topbar with a flex container"
-        },
         "selectbox": {
           "count": 3,
           "location": "right side in the topbar",
@@ -193,5 +188,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["inside topbar topbarnav is  deleted"]
 }
