@@ -41,11 +41,6 @@
           "count": 3,
           "location": "left side in the topbar",
           "description": "a text of list items on the left side of the topbar with a flex container"
-        },
-        "selectbox": {
-          "count": 3,
-          "location": "right side in the topbar",
-          "description": "selectboxes with flex container"
         }
       },
       "children_orientation_description": "heading is a text, topbar is a topbar --  all arranged in a flex format"
@@ -193,5 +188,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["inside topbar selectbox is deleted"]
 }
