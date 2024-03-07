@@ -55,11 +55,6 @@
       "location": "below the topbar",
       "description": "a flex container",
       "children": {
-        "logo": {
-          "count": 1,
-          "location": "left side in the middlebar",
-          "description": "a logo on the left side"
-        },
         "searchbox": {
           "count": 2,
           "location": "middle of the page",
@@ -193,5 +188,5 @@
     }
   },
   "sizing_updates": [".."],
-  "screen_and_layout_augmentations": [""]
+  "screen_and_layout_augmentations": ["inside the middlebar deleted the logo"]
 }
